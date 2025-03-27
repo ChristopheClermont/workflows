@@ -66,7 +66,7 @@ jobs:
     - name: Set up Maven settings.xml
       uses: s4u/maven-settings-action@v3.0.0
       with:
-        sonatypeSnapshots: true
+        repositories: '[{"id":"metricshub", "name":"metricshub", "url":"https://repo.metricshub.com/repository/maven-public", "snapshots":{"enabled":true}}]'
 
     - name: Setup Node.js ${{ inputs.nodeVersion }}
       uses: actions/setup-node@v4
